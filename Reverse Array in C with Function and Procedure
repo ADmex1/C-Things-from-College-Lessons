@@ -1,26 +1,38 @@
-#include <stdio.h>
-
-//idk what is this but in between function and procedure 
+	#include <stdio.h>
+//Tis Die Function und Procedure
 void inputArr(int Arr[], int size);
-void revArr(int Arr1[], int size);
-void reversedArr(int Arr1[], int maxSize);
-void procArr();
+void sumArr(int Arr1[], int Arr2[], int Arr3[], int size);
 
-//Size Input
-void procArr(){
+//Tis be the main function
+int main(){
+    int i;
     int maxSize;
-    printf("Input the max of an array: ");
+    printf("Input Max size of an Array Here: ");
     scanf("%d", &maxSize);
 
-    int Arr[maxSize];
-    inputArr(Arr, maxSize);
+    int Arr1[maxSize], Arr2[maxSize], Arr3[maxSize];
 
- reversedArr(Arr, maxSize);
-    revArr(Arr, maxSize);
-   return 
+    printf("Input Max size of an Array 1 Down Bellow! \n");
+    inputArr(Arr1, maxSize);
+
+    printf("Input Max size of an Array  2 Down Bellow! \n");
+    inputArr(Arr2, maxSize);
+
+    sumArr(Arr1, Arr2, Arr3, maxSize);
+
+    //output
+    printf("Here are the Sum: \n");
+    for(int i = 0; i < maxSize; i++){
+        printf("%d", Arr3[i]);
+        printf(" ");
+    }
+    printf("\n");
+
+    return 0;
 }
 
-//Array Value Input
+
+//Procedure ist Hier
 void inputArr(int Arr[], int size){
 	int i;
 	
@@ -29,31 +41,10 @@ void inputArr(int Arr[], int size){
 		scanf("%d",&Arr[i]);
 	}
 }
-//Reversed Array
-void revArr(int Arr1[], int size){
-    int n,i;
-    printf("Here are the  Output: ");
-    for (int i = size-1; i>=0; i--){
-        printf("%d ", Arr1[i]);
+//Tis The Sum of Array Section
+void sumArr(int Arr1[], int Arr2[],int Arr3[], int size){
+    int i;
+    for(i = 0; i < size; i++){
+        Arr3[i] = Arr1[i] + Arr2[i];
     }
-}
-
-//Original Array
- void reversedArr(int Arr1[], int maxSize){
-printf("\nHere are the Input: ");
-    for(int i = 0; i < maxSize; i++){
-        printf("%d", Arr1[i]);
-        printf(" ");
-    }
-    printf("\n");
-
-}
-
-
-//main Function
-int main(){
-
- procArr();
-
-   return 0;    
 }
