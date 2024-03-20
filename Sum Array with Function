@@ -12,10 +12,10 @@ int main(){
 
     int Arr1[maxSize], Arr2[maxSize], Arr3[maxSize];
 
-    printf("Input Max size of an Array 1 Down Bellow! \n");
+    printf("Input Value of an Array 1 Down Bellow! \n");
     inputArr(Arr1, maxSize);
 
-    printf("Input Max size of an Array  2 Down Bellow! \n");
+    printf("Input Value of an Array  2 Down Bellow! \n");
     inputArr(Arr2, maxSize);
 
     sumArr(Arr1, Arr2, Arr3, maxSize);
